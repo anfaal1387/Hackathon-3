@@ -1,0 +1,34 @@
+1. Architectural Style:
+Microservices Architecture to ensure modularity and scalability.
+2. Components Overview:
+Frontend:
+
+SPA/PWA using React or Next.js.
+Communicates with APIs via HTTP.
+Backend:
+
+Microservices for authentication, product catalog, cart, payments, and notifications.
+Message broker (RabbitMQ/Kafka) for asynchronous tasks like order processing.
+Database Layer:
+
+Relational Database (PostgreSQL): Products, orders, user profiles.
+NoSQL Database (MongoDB): Customer reviews, logs, and product catalogs.
+Third-Party Services:
+
+Payment Gateway APIs.
+Cloud Storage for media files (S3 buckets).
+
+
+[Frontend (React/Next.js)] ---> [API Gateway]
+                              ---> [Microservices]:
+                                     - Authentication
+                                     - Product Catalog
+                                     - Cart
+                                     - Payments
+                                     - Notifications
+                              ---> [Databases]:
+                                     - PostgreSQL
+                                     - MongoDB
+                              ---> [Third-Party Services]:
+                                     - Payment Gateways
+                                     - Cloud Storage

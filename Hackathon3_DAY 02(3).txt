@@ -1,0 +1,40 @@
+1. User
+Represents the customers and administrators using the platform.
+
+Attributes:
+id (Unique identifier)
+name
+email
+password
+2. Product
+Represents the items available for sale on the platform.
+
+Attributes:
+id (Unique identifier)
+name
+price
+stock
+3. Cart
+Represents the temporary storage for items users wish to purchase.
+
+Attributes:
+id (Unique identifier)
+user_id (References User)
+product_id (References Product)
+quantity
+4. Order
+Represents the finalized purchase made by a user.
+
+Attributes:
+id (Unique identifier)
+user_id (References User)
+total_price
+5. Order Item
+Represents the individual products in an order.
+
+Attributes:
+id (Unique identifier)
+order_id (References Order)
+product_id (References Product)
+quantity
+price

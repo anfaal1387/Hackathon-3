@@ -1,0 +1,29 @@
+1. API Endpoints:
+User Management:
+
+POST /api/register: User registration.
+POST /api/login: User login with JWT token issuance.
+GET /api/user/profile: Fetch user profile.
+Product Catalog:
+
+GET /api/products: Fetch all products with filters (pagination, category, price).
+GET /api/products/:id: Fetch specific product details.
+POST /api/admin/products: Add a new product (admin).
+Cart Management:
+
+GET /api/cart: Fetch cart items.
+POST /api/cart: Add item to cart.
+DELETE /api/cart/:id: Remove item from cart.
+Order Management:
+
+POST /api/orders: Create a new order.
+GET /api/orders: View order history.
+GET /api/orders/:id: View specific order details.
+Payment:
+
+POST /api/payment: Initiate payment.
+POST /api/payment/verify: Verify payment.
+2. Authentication & Security:
+JWT for user session management.
+API Rate limiting using middleware.
+Input validation for all endpoints.
